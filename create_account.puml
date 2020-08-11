@@ -1,0 +1,26 @@
+@startuml`
+  title: Account Registration
+
+  actor "Client" as client
+  participant "account-service" as account
+  queue "RabbitMQ" as queue
+  participant "notification-service" as ns
+
+  client -> account: POST /accounts
+  account -> queue: send message
+  client<-account: status:200
+
+  queue -> ns: subscribe topic
+  note right of ns
+      **Received Message**:
+          {
+            "name": "Didan",
+            "account_number": "0000-0000-4371",
+            "created_date":"2020-08-12"
+          }
+  end note
+
+
+
+
+@enduml
