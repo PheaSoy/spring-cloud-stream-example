@@ -1,0 +1,10 @@
+spring:
+  cloud:
+    stream:
+      bindings:
+        input:
+          destination: accounts_created
+          group: accounts_created_group
+
+server:
+  port: 8082

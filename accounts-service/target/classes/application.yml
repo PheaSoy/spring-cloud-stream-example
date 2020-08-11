@@ -1,0 +1,8 @@
+spring:
+  cloud:
+    stream:
+      bindings:
+        output:
+          destination: accounts_created
+server:
+  port: 8081
