@@ -5,6 +5,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.soyphea.account.domain.BaseDomain;
 import org.springframework.cloud.stream.messaging.Processor;
+import org.springframework.messaging.Message;
 import org.springframework.messaging.support.MessageBuilder;
 import org.springframework.stereotype.Service;
 
@@ -22,7 +23,11 @@ public class AccountBinder<T extends BaseDomain> {
 
   public void send(T data) {
     logger.info("Send message => {} to the channel",data);
+    Message message = MessageBuilder
+        .withPayload(data)
+        .setHeaderIfAbsent("operation","created")
+        .build();
     processor.output()
-        .send(MessageBuilder.withPayload(data).build());
+        .send(message);
   }
 }

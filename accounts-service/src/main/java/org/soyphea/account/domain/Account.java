@@ -2,8 +2,6 @@ package org.soyphea.account.domain;
 
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 import java.time.LocalDate;
 
 public class Account implements BaseDomain{
@@ -13,7 +11,6 @@ public class Account implements BaseDomain{
   @JsonProperty("account_number")
   private String accountNumber;
 
-  @JsonSerialize(using = ToStringSerializer.class)
   @JsonProperty("created_date")
   private LocalDate createDate;
 
