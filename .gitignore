@@ -1,2 +1,5 @@
 spring-cloud-stream-example.iml
 .idea
+accounts-service/target
+accounts-service/accounts-service.iml
+notification-service/notification-service.iml
