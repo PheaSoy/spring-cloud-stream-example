@@ -2,7 +2,7 @@
 
 ## Sequence Diagram
 
-image:create_account.png[Sequence Diagram]
+![sequence-diagram](create_account.png)
 
 ## Getting Start
 
