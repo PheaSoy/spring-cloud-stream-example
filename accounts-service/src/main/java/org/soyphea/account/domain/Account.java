@@ -4,7 +4,7 @@ package org.soyphea.account.domain;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.LocalDate;
 
-public class Account implements BaseDomain{
+public class Account {
 
   private String name;
 
