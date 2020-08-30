@@ -1,4 +1,9 @@
 spring-cloud-stream-example.iml
 .idea
 accounts-service/target
+<<<<<<< HEAD
 notification-service/target
+=======
+accounts-service/accounts-service.iml
+notification-service/notification-service.iml
+>>>>>>> 9c99544f2336e072d325869d3c6286d3086ee0f8
